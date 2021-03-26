@@ -11,7 +11,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
-
 </style>
 </head>
 
@@ -62,7 +61,7 @@
 
 <!-- Image Header -->
 <div class="w3-display-container w3-animate-opacity">
-  <img src="/w3images/sailboat.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+  <img src="HeaderImage.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
   <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
     <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="Go To W3.CSS">LEARN W3.CSS</button>
   </div>
@@ -178,14 +177,14 @@
   style="position:absolute;top:-28px;right:24px">+</a>
 </div>
 
-<!-- Pricing Row -->
+<!-- SignIn/SignUp gedeelte -->
 <div class="w3-row-padding w3-center w3-padding-64" id="pricing">
     <h2>PRICING</h2>
     <p>Choose a pricing plan that fits your needs.</p><br>
-    <div class="w3-third w3-margin-bottom">
+    <div class="w3-half w3-margin-bottom">
       <ul class="w3-ul w3-border w3-hover-shadow">
         <li class="w3-theme">
-          <p class="w3-xlarge">Basic</p>
+          <p class="w3-xlarge">Geen lid</p>
         </li>
         <li class="w3-padding-16"><b>10GB</b> Storage</li>
         <li class="w3-padding-16"><b>10</b> Emails</li>
@@ -201,10 +200,10 @@
       </ul>
     </div>
 
-    <div class="w3-third w3-margin-bottom">
+    <div class="w3-half w3-margin-bottom">
       <ul class="w3-ul w3-border w3-hover-shadow">
         <li class="w3-theme-l2">
-          <p class="w3-xlarge">Pro</p>
+          <p class="w3-xlarge">Lid</p>
         </li>
         <li class="w3-padding-16"><b>25GB</b> Storage</li>
         <li class="w3-padding-16"><b>25</b> Emails</li>
@@ -218,26 +217,7 @@
           <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
         </li>
       </ul>
-    </div>
-
-    <div class="w3-third w3-margin-bottom">
-      <ul class="w3-ul w3-border w3-hover-shadow">
-        <li class="w3-theme">
-          <p class="w3-xlarge">Premium</p>
-        </li>
-        <li class="w3-padding-16"><b>50GB</b> Storage</li>
-        <li class="w3-padding-16"><b>50</b> Emails</li>
-        <li class="w3-padding-16"><b>50</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide"><i class="fa fa-usd"></i> 50</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-theme-l5 w3-padding-24">
-          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
-        </li>
-      </ul>
-    </div>
+    </div>  
 </div>
 
 <!-- Contact Container -->
