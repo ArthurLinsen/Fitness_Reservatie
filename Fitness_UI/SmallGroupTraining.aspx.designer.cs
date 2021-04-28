@@ -24,6 +24,15 @@ namespace Fitness_UI
         protected global::System.Web.UI.HtmlControls.HtmlForm formsmallGroupTraining;
 
         /// <summary>
+        /// HeaderImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image HeaderImage;
+
+        /// <summary>
         /// lbxSGTGeeft control.
         /// </summary>
         /// <remarks>

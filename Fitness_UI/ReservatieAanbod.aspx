@@ -56,7 +56,9 @@ body {
     <asp:Button ID="btnKiesLes" runat="server" Text="Kies soort les" OnClick="btnKiesLes_Click" />
     <br />
     <h3>Kiess u datum en tijdstip:</h3>
-    <asp:RadioButtonList ID="rbtnDatumEnTijd" runat="server"></asp:RadioButtonList>
+    <asp:RadioButtonList ID="rbtnDatum" runat="server"></asp:RadioButtonList>
+    <br />
+    <asp:RadioButtonList ID="rbtnTijd" runat="server"></asp:RadioButtonList>
     <br />
     <asp:Button ID="btnReserveer" runat="server" Text="Reserveer" OnClick="btnReserveer_Click" />
 </div>

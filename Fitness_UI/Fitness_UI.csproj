@@ -83,7 +83,6 @@
     <Content Include="ExtraLayout.css" />
     <Content Include="SmallGroupTraining.aspx" />
     <Content Include="ReservatieAanbod.aspx" />
-    <Content Include="ReservatieDatum.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -157,13 +156,6 @@
     </Compile>
     <Compile Include="ReservatieAanbod.aspx.designer.cs">
       <DependentUpon>ReservatieAanbod.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ReservatieDatum.aspx.cs">
-      <DependentUpon>ReservatieDatum.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ReservatieDatum.aspx.designer.cs">
-      <DependentUpon>ReservatieDatum.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

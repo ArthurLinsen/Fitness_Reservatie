@@ -72,29 +72,56 @@ namespace Fitness_Domain.Persistence
             conn.Close();
             return returnlist;
         }
-        public List<Business.Reservatie> getReservatiesFromLidFromDB(string connString, int idLid)
+        //public List<Business.Reservatie> getReservatiesFromLidFromDB(string connString, int idLid)
+        //{
+        //    MySqlConnection conn = new MySqlConnection(connString);
+        //    MySqlCommand cmd = new MySqlCommand("SELECT reservatie.idReservatie, reservatie.Datum, reservatie.Tijdstip, " +
+        //        "lid.FamilieNaam, lid.VoorNaam, les.Naam " +
+        //        "FROM fitnessreservatie.reservatie " +
+        //        "INNER JOIN fitnessreservatie.lid ON lid.idLid = reservatie.FKLid " +
+        //        "INNER JOIN fitnessreservatie.les ON les.idLes = reservatie.FKLES " +
+        //        "WHERE idLid = @idLid; ", conn);
+        //    cmd.Parameters.AddWithValue("idLid", idLid);
+
+        //    conn.Open();
+
+        //    MySqlDataReader dataReader = cmd.ExecuteReader();
+        //    List<Reservatie> returnlist = new List<Reservatie>();
+
+        //    while (dataReader.Read())
+        //    {
+        //        Business.Reservatie item = new Business.Reservatie(
+        //            Convert.ToInt32(dataReader[0]),
+        //            Convert.ToDateTime(dataReader[1]),
+        //            Convert.ToString(dataReader[2]),
+        //            Convert.ToInt32(dataReader[3]),
+        //            Convert.ToInt32(dataReader[4]));
+        //        returnlist.Add(item);
+        //    }
+        //    conn.Close();
+        //    return returnlist;
+        //}
+        public List<VrijeReservatie> getVrijeReservatiesFromGekozenLesFromDB(string connString, int idLes)
         {
-            MySqlConnection conn = new MySqlConnection(connString);
-            MySqlCommand cmd = new MySqlCommand("SELECT reservatie.idReservatie, reservatie.Datum, reservatie.Tijdstip, " +
-                "lid.FamilieNaam, lid.VoorNaam, les.Naam" +
-                "FROM fitnessreservatie.reservatie" +
-                "INNER JOIN fitnessreservatie.lid ON lid.idLid = reservatie.FKLid" +
-                "INNER JOIN fitnessreservatie.les ON les.idLes = reservatie.FKLES" +
-                "WHERE idLid = @idLid; ", conn);
-            cmd.Parameters.AddWithValue("idLid", idLid);
+            MySqlConnection conn = new MySqlConnection(_connectionString);
+            MySqlCommand cmd = new MySqlCommand("SELECT * " +
+                "FROM fitnessreservatie.reservatie " +
+                "WHERE reservatie.FKLid is null and FKLes = @idLes", conn);
+            cmd.Parameters.AddWithValue("idLes", idLes);
 
             conn.Open();
-
             MySqlDataReader dataReader = cmd.ExecuteReader();
-            List<Reservatie> returnlist = new List<Reservatie>();
+            List<Reservatie> returnlist = new List<Reservatie>(); //fout tussen "Reservatie" & "VrijeReservatie"
 
             while (dataReader.Read())
             {
+                int FKLid = 0;
+                if (!Convert.IsDBNull(dataReader[3])) FKLid = Convert.ToInt32(dataReader[3]);
                 Business.Reservatie item = new Business.Reservatie(
                     Convert.ToInt32(dataReader[0]),
                     Convert.ToDateTime(dataReader[1]),
                     Convert.ToString(dataReader[2]),
-                    Convert.ToInt32(dataReader[3]),
+                    FKLid,
                     Convert.ToInt32(dataReader[4]));
                 returnlist.Add(item);
             }

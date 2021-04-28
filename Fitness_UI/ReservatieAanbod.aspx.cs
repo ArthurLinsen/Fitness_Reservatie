@@ -37,20 +37,44 @@ namespace Fitness_UI
             rbtnSoortLes.DataSource = alleLessen;
             rbtnSoortLes.DataBind();
         }
-        private void fillrbtnDatumEnTijd()
+        private void fillrbtnDatum()
         {
-            List<VrijeReservatie> alleDataEnTijd = _controller.getVrijeReservaties();
-            rbtnDatumEnTijd.DataSource = alleDataEnTijd;
-            rbtnDatumEnTijd.DataBind();
+            List<VrijeReservatie> DataGekozenLes = _controller.getVrijeReservatieFromGekozenLes();
+            rbtnDatum.DataSource = DataGekozenLes;
+            rbtnDatum.DataBind();
+        }
+        private void fillrbtnTijd()
+        {
+            List<VrijeReservatie> TijdGekozenLes = _controller.getVrijeReservatieFromGekozenLes();
+            rbtnDatum.DataSource = TijdGekozenLes;
+            rbtnDatum.DataBind();
         }
         protected void btnKiesLes_Click(object sender, EventArgs e)
         {
-
-            fillrbtnDatumEnTijd();
+            int index = 0;
+            try
+            {
+                index = rbtnSoortLes.SelectedIndex;
+            }
+            catch
+            {
+                //nog een foutmelding schrijven
+                return;
+            }
+            _controller.KiesLes(index);
+            fillrbtnDatum();
+            fillrbtnTijd();
         }
         protected void btnReserveer_Click(object sender, EventArgs e)
         {
-            
+            //if (!_controller.setReservatie(rbtnDatum.SelectedValue, rbtnTijd.SelectedValue, idLid = null ,rbtnSoortLes))
+            //{
+            //    _controller.reserveerBeschikbareReservatie();
+            //}
+            //else
+            //{
+            //    ClientScript.RegisterClientScriptBlock(this.GetType(), "s", "window.alert('Reservatie mislukt')");
+            //}
         } 
     }
 }

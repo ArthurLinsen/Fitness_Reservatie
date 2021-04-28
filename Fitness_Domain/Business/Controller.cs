@@ -13,6 +13,7 @@ namespace Fitness_Domain.Business
         private Persistence.Controller _persistController;
         private Fitness _fitness;
         private Lid _user;
+        private Les _gekozenLes;
         //properties
         //constructor
         public Controller()
@@ -123,6 +124,16 @@ namespace Fitness_Domain.Business
         public void reserveerBeschikbareReservatie(int indexBeschikbareAfspraak)
         {
             _persistController.reserveerBeschikbareReservatie(indexBeschikbareAfspraak, _user.IDLid);
-        }       
+        } 
+        
+        //Les kiezen bij reservatie
+        public void KiesLes(int indexLes)
+        {
+            _gekozenLes = getLessen()[indexLes];
+        }
+        public List<VrijeReservatie> getVrijeReservatieFromGekozenLes()
+        {
+            _persistController.getVrijeReservatieFromGekozenLes(_gekozenLes.IDLes);
+        }
     }
 }
