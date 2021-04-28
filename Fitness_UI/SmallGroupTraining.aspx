@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Fitness_UI.Home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SmallGroupTraining.aspx.cs" Inherits="Fitness_UI.SmallGroupTraining" %>
 
 <!DOCTYPE html>
 <html>
 <head runat="server">
-<title>Home</title>
+<title>Small group training</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -15,10 +15,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="ExtraLayout.css" />
 </head>
-
 <body id="myPage">
-<form id="formHome" runat="server">
-
+<form id="formsmallGroupTraining" runat="server">
+  
 <!-- Navbar -->
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align">
@@ -51,19 +50,42 @@
   </div>
 </div>
 
-<!-- Image Header -->
+<!-- Header -->
 <div class="w3-display-container w3-animate-opacity">
-    <asp:Image ID="HeaderImage" runat="server" ImageUrl="Images/HeaderImage.jpg" style="width:100%;min-height:350px;max-height:800px;"/>
+  <img src="HeaderImage.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
 </div>
 
-<!-- Home gedeelte  -->
+<!-- Fitness gedeelte -->
 <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
     <div class="w3-twothird">
-        <h3>Welkom</h3>
-        <p>Bij RtalsMove geloven wij van een grondige en persoonlijke aanpak. Of het doel nu is om gewicht verliezen, 
-           conditie te verbeteren of spiermassa opbouwen. De training die voor jouw het beste past wordt samengesteld 
-           aan de hand van jouw persoonlijke doelen. Samen met onze trainers en met jouw zoeken we naar een balans 
-           tussen efficiëntie en haalbaarheid.</p>
+        <h2>Small Group Training</h2>
+        <p><b>Wat is een Small Group training?</b> Een Small Group bestaat uit maximaal 5 personen. Door de 
+            kleine groep is persoonlijke begeleiding in de training heel goed. Sporten in een kleine groep verhoogd ook de 
+            motivatie. Het is mogelijk om je eigen groep te starten met bekenden of deel te nemen aan een 
+            bestaande groep. Een Small Group trainingssessie duurt 30 tot 60 min. De workouts zijn  afgestemd 
+            op kleine groepen en de focus ligt op conditie en functioneel trainen.</p>
+        <br />
+        <h3>Wat doe je in een Small Group training?</h3>
+        <br />
+        <asp:ListBox ID="lbxSGTGeeft" runat="server">
+            <asp:ListItem>Cardio training</asp:ListItem>
+            <asp:ListItem>Krachttraining</asp:ListItem>
+        </asp:ListBox>
+        <br />
+        <p>De trainingen zijn gericht op alle spiergroepen maar ook op de lichaamshouding, flexibilieit en stabiliteit
+            tijdens het trainen</p>
+        <br />
+        <asp:ListBox ID="lbxAssortimentSGT" runat="server">
+            <asp:ListItem>Training op alle niveaus</asp:ListItem>
+            <asp:ListItem>Afwisselende, persoonlijke en motiverende trainingsmethode</asp:ListItem>
+            <asp:ListItem>Gegarandeerd optimaal resultaat</asp:ListItem>
+            <asp:ListItem>Mogelijkheid tot buiten training</asp:ListItem>
+        </asp:ListBox>
+        <br />
+        <h3>Voor wie is Small Group Training?</h3>
+        <p>Iedereen die graag in groepsverband traint is geschikt voor Small Group Training. Maar ook degene die 
+            graag de extra uitdaging heeft van een persoonlijke training. Ook voor mensen die na hun Personal 
+            Training begeleiding willen blijven houden.</p>
     </div>
 </div>
 
@@ -83,30 +105,5 @@
   </div>
 </footer>
 </form>
-<script>
-// Script for side navigation
-function w3_open() {
-  var x = document.getElementById("mySidebar");
-  x.style.width = "300px";
-  x.style.paddingTop = "10%";
-  x.style.display = "block";
-}
-
-// Close side navigation
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
-
 </body>
 </html>

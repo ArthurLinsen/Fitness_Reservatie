@@ -89,5 +89,15 @@ namespace Fitness_Domain.Persistence
             FitnessClubGeeftLesMapper mapper = new FitnessClubGeeftLesMapper(_connectionString);
             mapper.addFitnessClubGeeftLesInDB(fitclubles);
         }
+        public List<VrijeReservatie> getVrijeReservaties()
+        {
+            ReservatieMapper mapper = new ReservatieMapper();
+            return mapper.getVrijeReservatiesFromDB(_connectionString);
+        }
+        public void reserveerBeschikbareReservatie(int indexReservatie, int FKLid)
+        {
+            ReservatieMapper mapper = new ReservatieMapper();
+             mapper.reserveerBeschikbareReservatieInDB(_connectionString, indexReservatie, FKLid);
+        }
     }
 }

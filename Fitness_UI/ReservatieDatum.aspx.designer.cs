@@ -7,29 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Fitness_UI
+namespace Fitness_UI.ReservatieStappen
 {
 
 
-    public partial class Home
+    public partial class ReservatieDatum
     {
 
         /// <summary>
-        /// formHome control.
+        /// formReservatieDatum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm formHome;
-
-        /// <summary>
-        /// HeaderImage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image HeaderImage;
+        protected global::System.Web.UI.HtmlControls.HtmlForm formReservatieDatum;
     }
 }

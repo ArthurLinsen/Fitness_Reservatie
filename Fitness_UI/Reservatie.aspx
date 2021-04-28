@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Fitness_UI.Home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Reservatie.aspx.cs" Inherits="Fitness_UI.Reservatie" %>
 
 <!DOCTYPE html>
 <html>
@@ -14,10 +14,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="ExtraLayout.css" />
+
 </head>
 
 <body id="myPage">
-<form id="formHome" runat="server">
+<form id="formReservatie" runat="server">
 
 <!-- Navbar -->
 <div class="w3-top">
@@ -51,20 +52,39 @@
   </div>
 </div>
 
-<!-- Image Header -->
-<div class="w3-display-container w3-animate-opacity">
-    <asp:Image ID="HeaderImage" runat="server" ImageUrl="Images/HeaderImage.jpg" style="width:100%;min-height:350px;max-height:800px;"/>
-</div>
-
-<!-- Home gedeelte  -->
-<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
-    <div class="w3-twothird">
-        <h3>Welkom</h3>
-        <p>Bij RtalsMove geloven wij van een grondige en persoonlijke aanpak. Of het doel nu is om gewicht verliezen, 
-           conditie te verbeteren of spiermassa opbouwen. De training die voor jouw het beste past wordt samengesteld 
-           aan de hand van jouw persoonlijke doelen. Samen met onze trainers en met jouw zoeken we naar een balans 
-           tussen efficiëntie en haalbaarheid.</p>
+<!-- SignIn/SignUp gedeelte -->
+<div class="w3-row-padding w3-center w3-padding-64" id="pricing">
+    <h2>Log in of meld je aan</h2>
+    <p>Bij rtalsmove kan u enkel komen fitnessen wanneer u gereserveerd heeft. Als u 
+        een lid bent kan u hier links onder inloggen. Indien u geen lid bent kan u 
+        zichzelf aanmelden hier rechts aanmelden.</p><br>
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">Lid</p>
+        </li>
+        <li class="w3-padding-16"><b>Reservatie fitness: </b> voor de fitness kan u meerder uren achter elkaar reserveren</li>
+        <li class="w3-padding-16"><b>Reservatie groeples en personal training: </b> bij deze categoriën kan u enkel 1 uur per keer reserveren</li>        
+        <li class="w3-theme-l5 w3-padding-24">
+          <asp:Button ID="btnSingIn" class="w3-button w3-teal w3-padding-large" runat="server" Text="Sign In" OnClick="btnSingIn_Click" />
+          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign in</button>
+        </li>
+      </ul>
     </div>
+
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme-l2">
+          <p class="w3-xlarge">Geen lid</p>
+        </li>
+        <li class="w3-padding-16"><b>Krijg toegang tot: </b>Fitness, Group training, Small group training & Personal training</li>
+        <li class="w3-padding-16"><b>Voor een prijs van: <i class="fa fa-eur"></i> 50</b> per maand</li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <asp:Button ID="btnSignUp" class="w3-button w3-teal w3-padding-large" runat="server" Text="Sign Up" OnClick="btnSignUp_Click" />
+          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
+        </li>
+      </ul>
+    </div>  
 </div>
 
 <!-- Footer -->
@@ -83,30 +103,5 @@
   </div>
 </footer>
 </form>
-<script>
-// Script for side navigation
-function w3_open() {
-  var x = document.getElementById("mySidebar");
-  x.style.width = "300px";
-  x.style.paddingTop = "10%";
-  x.style.display = "block";
-}
-
-// Close side navigation
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
-
 </body>
 </html>

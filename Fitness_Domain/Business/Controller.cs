@@ -12,6 +12,7 @@ namespace Fitness_Domain.Business
         //fields
         private Persistence.Controller _persistController;
         private Fitness _fitness;
+        private Lid _user;
         //properties
         //constructor
         public Controller()
@@ -22,6 +23,7 @@ namespace Fitness_Domain.Business
             _fitness.LesLijst = _persistController.getLessen();
             _fitness.CategorieLijst = _persistController.getCategories();
             _fitness.ReservatieLijst = _persistController.getReservaties();
+            _fitness.VrijeReservatieLijst = _persistController.getVrijeReservaties();
             _fitness.FitnessClubLijst = _persistController.getFitnessClubs();
             _fitness.FitnessClubGeeftLesLijst = _persistController.getFitnessClubsGevenLessen();
         }
@@ -35,10 +37,19 @@ namespace Fitness_Domain.Business
         {
             return _fitness.LidLijst;
         }
-        public void setLid(Lid lid)
+        public bool setLid(string familieNaam, string voorNaam, DateTime geboorteDatum, string adres, int postcode, string gemeente, string telefoonnummer, string emailadres, string rijksregisternummer)
         {
-            _persistController.addLid(lid);
-            _fitness.LidLijst.Add(lid);
+            List<Lid> Ledenlijst = getLeden();
+            foreach (Lid lid in Ledenlijst)
+            {
+                if (lid.Rijksregisternummer == rijksregisternummer)
+                {
+                    return false;
+                }
+            }
+            Lid newLid = new Lid(familieNaam, voorNaam, geboorteDatum, adres, postcode, gemeente, telefoonnummer, emailadres, rijksregisternummer);
+            _persistController.addLid(newLid);
+            return true;
         }
         //lessen
         public List<Les> getLessen()
@@ -65,7 +76,7 @@ namespace Fitness_Domain.Business
         {
             return _fitness.ReservatieLijst;
         }
-        public void setReservaties(Reservatie reser)
+        public void setReservatie(Reservatie reser)
         {
             _persistController.addReservatie(reser);
             _fitness.ReservatieLijst.Add(reser);
@@ -90,5 +101,28 @@ namespace Fitness_Domain.Business
             _persistController.addFitnessClubGeeftLes(fitclubles);
             _fitness.FitnessClubGeeftLesLijst.Add(fitclubles);
         }
+        //login user
+        public bool LoginUser(string emailadres)
+        {
+            List<Lid> Ledenlijst = getLeden();
+            foreach (Lid lid in Ledenlijst)
+            {
+                if (lid.Emailadres == emailadres)
+                {
+                    _user = lid;
+                    return true;
+                }
+            }
+            return false;
+        }
+        //Beschikbare reservaties
+        public List<VrijeReservatie> getVrijeReservaties()
+        {
+            return _persistController.getVrijeReservaties();
+        }
+        public void reserveerBeschikbareReservatie(int indexBeschikbareAfspraak)
+        {
+            _persistController.reserveerBeschikbareReservatie(indexBeschikbareAfspraak, _user.IDLid);
+        }       
     }
 }

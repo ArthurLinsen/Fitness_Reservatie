@@ -13,6 +13,7 @@ namespace Fitness_Domain.Business
         List<Categorie> _categorieLijst;
         List<Les> _lesLijst;
         List<Reservatie> _reservatieLijst;
+        List<VrijeReservatie> _vrijereservatieLijst;
         List<FitnessClub> _fitnessClubLijst;
         List<FitnessClubGeeftLes> _fitnessClubGeeftLesLijst;
         //properties
@@ -35,6 +36,11 @@ namespace Fitness_Domain.Business
         {
             get { return _reservatieLijst; }
             set { _reservatieLijst = value; }
+        }
+        public List<VrijeReservatie> VrijeReservatieLijst
+        {
+            get { return _vrijereservatieLijst; }
+            set { _vrijereservatieLijst = value; }
         }
         public List<FitnessClub> FitnessClubLijst
         {

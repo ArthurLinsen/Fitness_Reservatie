@@ -18,9 +18,9 @@ namespace Fitness_Domain.Persistence
         {
             _connectionString = "server = localhost; user id = root; password=1234;database=fitnessreservatie";
         }
-        public LidMapper(string connstring)
+        public LidMapper(string connString)
         {
-            _connectionString = connstring;
+            _connectionString = connString;
         }
         //methods
         public List<Business.Lid> getLedenFromDB()

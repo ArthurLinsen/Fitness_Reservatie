@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Fitness_UI.Home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Fitness.aspx.cs" Inherits="Fitness_UI.Fitness" %>
 
 <!DOCTYPE html>
-<html>
+<html">
 <head runat="server">
-<title>Home</title>
+<title>Fitness</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -17,7 +17,7 @@
 </head>
 
 <body id="myPage">
-<form id="formHome" runat="server">
+<form id="formFitness" runat="server">
 
 <!-- Navbar -->
 <div class="w3-top">
@@ -51,19 +51,19 @@
   </div>
 </div>
 
-<!-- Image Header -->
+<!-- Header -->
 <div class="w3-display-container w3-animate-opacity">
-    <asp:Image ID="HeaderImage" runat="server" ImageUrl="Images/HeaderImage.jpg" style="width:100%;min-height:350px;max-height:800px;"/>
+  <img src="HeaderImage.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
 </div>
 
-<!-- Home gedeelte  -->
-<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+<!-- Fitness gedeelte -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="fitness">
     <div class="w3-twothird">
-        <h3>Welkom</h3>
-        <p>Bij RtalsMove geloven wij van een grondige en persoonlijke aanpak. Of het doel nu is om gewicht verliezen, 
-           conditie te verbeteren of spiermassa opbouwen. De training die voor jouw het beste past wordt samengesteld 
-           aan de hand van jouw persoonlijke doelen. Samen met onze trainers en met jouw zoeken we naar een balans 
-           tussen efficiëntie en haalbaarheid.</p>
+        <h2>Fitness</h2>
+        <p>Als u op zoek bent naar spannende sportieve activiteiten, bent u bij ons aan het correcte adres. Onze instructeurs 
+            weten waar ze het over hebben en doen er alles aan om u de beste ervaring te bieden. Sinds juli 2019 is de 
+            fitnessruimte in zijn geheel vernieuwd. Er zijn gloednieuwe cardio- en gewichtsmachines beschikbaar. U kunt 
+            trainen in een zaal met een grote van 350 m².</p>
     </div>
 </div>
 
@@ -83,30 +83,5 @@
   </div>
 </footer>
 </form>
-<script>
-// Script for side navigation
-function w3_open() {
-  var x = document.getElementById("mySidebar");
-  x.style.width = "300px";
-  x.style.paddingTop = "10%";
-  x.style.display = "block";
-}
-
-// Close side navigation
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
-
 </body>
 </html>

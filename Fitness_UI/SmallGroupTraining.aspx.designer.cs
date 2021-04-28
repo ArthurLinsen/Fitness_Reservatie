@@ -11,25 +11,34 @@ namespace Fitness_UI
 {
 
 
-    public partial class Home
+    public partial class SmallGroupTraining
     {
 
         /// <summary>
-        /// formHome control.
+        /// formsmallGroupTraining control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm formHome;
+        protected global::System.Web.UI.HtmlControls.HtmlForm formsmallGroupTraining;
 
         /// <summary>
-        /// HeaderImage control.
+        /// lbxSGTGeeft control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image HeaderImage;
+        protected global::System.Web.UI.WebControls.ListBox lbxSGTGeeft;
+
+        /// <summary>
+        /// lbxAssortimentSGT control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListBox lbxAssortimentSGT;
     }
 }

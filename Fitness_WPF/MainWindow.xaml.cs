@@ -49,7 +49,7 @@ namespace Fitness_WPF
         private void btnVoegLidToe_Click(object sender, RoutedEventArgs e)
         {
             Lid lid = new Lid(txtFamilieNaam.Text, txtVoornaam.Text, Convert.ToDateTime(dpkGeboortedatum.SelectedDate), txtAdres.Text, Convert.ToInt32(txtPostcode.Text), txtGemeente.Text, txtTelefoonnummer.Text, txtEmailadres.Text, txtRijksregisternummer.Text);
-            _controller.setLid(lid);
+            //_controller.setLid(lid);
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Fitness_UI.Home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="Fitness_UI.Contact" %>
 
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
 <head runat="server">
 <title>Home</title>
@@ -17,7 +17,7 @@
 </head>
 
 <body id="myPage">
-<form id="formHome" runat="server">
+<form id="formContact" runat="server">
 
 <!-- Navbar -->
 <div class="w3-top">
@@ -51,21 +51,24 @@
   </div>
 </div>
 
-<!-- Image Header -->
-<div class="w3-display-container w3-animate-opacity">
-    <asp:Image ID="HeaderImage" runat="server" ImageUrl="Images/HeaderImage.jpg" style="width:100%;min-height:350px;max-height:800px;"/>
+<!-- Contact gedeelte -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact</span></div>
+      <h3>Address</h3>
+      <p>Swing by for a cup of coffee, or whatever.</p>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i> Herentals, Lierseweg 230</p>
+      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  0468/00 19 11</p>
+      <p><i class="fa fa-fax w3-text-teal w3-xlarge"></i>  014/89 84 68</p>
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  info@rtalsmove.be</p>
+    </div>
+      <asp:Image ID="imgGebouwRtalsmove" runat="server" ImageURL="Images/gebouwRtalsmove.PNG" Height="222px"/>
+  </div>
 </div>
 
-<!-- Home gedeelte  -->
-<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
-    <div class="w3-twothird">
-        <h3>Welkom</h3>
-        <p>Bij RtalsMove geloven wij van een grondige en persoonlijke aanpak. Of het doel nu is om gewicht verliezen, 
-           conditie te verbeteren of spiermassa opbouwen. De training die voor jouw het beste past wordt samengesteld 
-           aan de hand van jouw persoonlijke doelen. Samen met onze trainers en met jouw zoeken we naar een balans 
-           tussen efficiëntie en haalbaarheid.</p>
-    </div>
-</div>
+<!-- Image van locatie -->
+<asp:Image ID="imgLocatieRtalsmove" runat="server" ImageURL="Images/locateRtalsmove.PNG" style="min-height:250px;max-height:450px;"/>
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
@@ -83,30 +86,5 @@
   </div>
 </footer>
 </form>
-<script>
-// Script for side navigation
-function w3_open() {
-  var x = document.getElementById("mySidebar");
-  x.style.width = "300px";
-  x.style.paddingTop = "10%";
-  x.style.display = "block";
-}
-
-// Close side navigation
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
-
 </body>
 </html>

@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Fitness_UI.Home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PersonalTraining.aspx.cs" Inherits="Fitness_UI.PersonalTraining" %>
 
 <!DOCTYPE html>
 <html>
 <head runat="server">
-<title>Home</title>
+<title>Personal training</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -15,10 +15,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="ExtraLayout.css" />
 </head>
-
 <body id="myPage">
-<form id="formHome" runat="server">
-
+<form id="formPersonalTraining" runat="server">
+ 
 <!-- Navbar -->
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align">
@@ -51,19 +50,18 @@
   </div>
 </div>
 
-<!-- Image Header -->
+<!-- Header -->
 <div class="w3-display-container w3-animate-opacity">
-    <asp:Image ID="HeaderImage" runat="server" ImageUrl="Images/HeaderImage.jpg" style="width:100%;min-height:350px;max-height:800px;"/>
+  <img src="HeaderImage.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
 </div>
 
-<!-- Home gedeelte  -->
-<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+<!-- Personal Training gedeelte -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="personaltraining">
     <div class="w3-twothird">
-        <h3>Welkom</h3>
-        <p>Bij RtalsMove geloven wij van een grondige en persoonlijke aanpak. Of het doel nu is om gewicht verliezen, 
-           conditie te verbeteren of spiermassa opbouwen. De training die voor jouw het beste past wordt samengesteld 
-           aan de hand van jouw persoonlijke doelen. Samen met onze trainers en met jouw zoeken we naar een balans 
-           tussen efficiëntie en haalbaarheid.</p>
+        <h2>Personal Training</h2>
+        <p>Vind je het lastig om gewicht te verliezen? Gewicht bij te komen? Of je six-pack te creëren? Dan ben je bij
+            Personal Training aan het correcte einde. Samen met een personal trainer ga je gefocust te werkt aan je 
+            doelstellingen.</p>
     </div>
 </div>
 
@@ -83,30 +81,5 @@
   </div>
 </footer>
 </form>
-<script>
-// Script for side navigation
-function w3_open() {
-  var x = document.getElementById("mySidebar");
-  x.style.width = "300px";
-  x.style.paddingTop = "10%";
-  x.style.display = "block";
-}
-
-// Close side navigation
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
-
 </body>
 </html>

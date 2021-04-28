@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace Fitness_Domain.Business
 {
-    public class Reservatie
+    public class VrijeReservatie
     {
         //fields
         private int _idReservatie;
         private DateTime _datum;
-        private string _tijdstip;
-        private int _fkLid;
-        private int _fkLes;
+        private string _tijdstip, _lesnaam;
+       
         //properties
         public int IDReservatie
         { get { return _idReservatie; } }
@@ -27,37 +26,30 @@ namespace Fitness_Domain.Business
             get { return _tijdstip; }
             set { _tijdstip = value; }
         }
-        public int FKLid
+        public string Lesnaam
         {
-            get { return _fkLid; }
-            set { _fkLid = value; }
-        }
-        public int FKLes
-        {
-            get { return _fkLes; }
-            set { _fkLes = value; }
+            get { return _lesnaam; }
+            set { _lesnaam= value; }
         }
         //constructor
-        public Reservatie(int idReservatie, DateTime datum, string tijdstip, int fkLid, int fkLes)
+        public VrijeReservatie(int idReservatie, DateTime datum, string tijdstip, string lesnaam)
         {
             _idReservatie = idReservatie;
             _datum = datum;
             _tijdstip = tijdstip;
-            _fkLid = fkLid;
-            _fkLes = fkLes;
+            _lesnaam = lesnaam;
         }
-        public Reservatie(DateTime datum, string tijdstip, int fkLid, int fkLes)
+        public VrijeReservatie(DateTime datum, string tijdstip, string lesnaam)
         {
             _idReservatie = 0;
             _datum = datum;
             _tijdstip = tijdstip;
-            _fkLid = fkLid;
-            _fkLes = fkLes;
+            _lesnaam = lesnaam;
         }
         //methods
         public override string ToString()
         {
-            return _idReservatie + " - " + _datum + " - " + _tijdstip + " - " + _fkLid + " - " + _fkLes;
+            return _idReservatie + " - " + _datum + " - " + _tijdstip + " - " + _lesnaam;
         }
     }
 }

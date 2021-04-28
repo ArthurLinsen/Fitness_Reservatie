@@ -67,11 +67,54 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Aanmeld.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Fitness.aspx" />
+    <Content Include="GroupTraining.aspx" />
     <Content Include="Home.aspx" />
+    <Content Include="Images\AanmeldImage.jpg" />
+    <Content Include="Images\gebouwRtalsmove.PNG" />
     <Content Include="Images\HeaderImage.jpg" />
+    <Content Include="Images\locateRtalsmove.PNG" />
+    <Content Include="Images\LogInImage.jpg" />
+    <Content Include="logIn.aspx" />
+    <Content Include="PersonalTraining.aspx" />
+    <Content Include="Reservatie.aspx" />
+    <Content Include="ExtraLayout.css" />
+    <Content Include="SmallGroupTraining.aspx" />
+    <Content Include="ReservatieAanbod.aspx" />
+    <Content Include="ReservatieDatum.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aanmeld.aspx.cs">
+      <DependentUpon>Aanmeld.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aanmeld.aspx.designer.cs">
+      <DependentUpon>Aanmeld.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fitness.aspx.cs">
+      <DependentUpon>Fitness.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fitness.aspx.designer.cs">
+      <DependentUpon>Fitness.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GroupTraining.aspx.cs">
+      <DependentUpon>GroupTraining.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GroupTraining.aspx.designer.cs">
+      <DependentUpon>GroupTraining.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -79,7 +122,49 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="logIn.aspx.cs">
+      <DependentUpon>logIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logIn.aspx.designer.cs">
+      <DependentUpon>logIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalTraining.aspx.cs">
+      <DependentUpon>PersonalTraining.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonalTraining.aspx.designer.cs">
+      <DependentUpon>PersonalTraining.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reservatie.aspx.cs">
+      <DependentUpon>Reservatie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reservatie.aspx.designer.cs">
+      <DependentUpon>Reservatie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmallGroupTraining.aspx.cs">
+      <DependentUpon>SmallGroupTraining.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmallGroupTraining.aspx.designer.cs">
+      <DependentUpon>SmallGroupTraining.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReservatieAanbod.aspx.cs">
+      <DependentUpon>ReservatieAanbod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReservatieAanbod.aspx.designer.cs">
+      <DependentUpon>ReservatieAanbod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReservatieDatum.aspx.cs">
+      <DependentUpon>ReservatieDatum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReservatieDatum.aspx.designer.cs">
+      <DependentUpon>ReservatieDatum.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

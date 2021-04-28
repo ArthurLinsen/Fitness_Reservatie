@@ -11,25 +11,34 @@ namespace Fitness_UI
 {
 
 
-    public partial class Home
+    public partial class Contact
     {
 
         /// <summary>
-        /// formHome control.
+        /// formContact control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm formHome;
+        protected global::System.Web.UI.HtmlControls.HtmlForm formContact;
 
         /// <summary>
-        /// HeaderImage control.
+        /// imgGebouwRtalsmove control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image HeaderImage;
+        protected global::System.Web.UI.WebControls.Image imgGebouwRtalsmove;
+
+        /// <summary>
+        /// imgLocatieRtalsmove control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgLocatieRtalsmove;
     }
 }

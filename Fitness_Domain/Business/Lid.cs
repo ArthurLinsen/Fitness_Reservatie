@@ -97,7 +97,7 @@ namespace Fitness_Domain.Business
         //methods
         public override string ToString()
         {
-            return _idLid + " - " + _familieNaam + " " + _voorNaam + " (" + _geboorteDatum + "): " + _adres + " " + _postcode + " " + _gemeente + " "+ _telefoonnummer + " " + _emailadres + " " + _rijksregisternummer;
+            return _idLid + " - " + _familieNaam + " - " + _voorNaam + " - " + _geboorteDatum + " - " + _adres + " - " + _postcode + " - " + _gemeente + " - "+ _telefoonnummer + " - " + _emailadres + " - " + _rijksregisternummer;
         }
     }
 }

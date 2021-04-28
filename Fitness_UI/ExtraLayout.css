@@ -1,0 +1,11 @@
+﻿.layoutSignInUp {
+    border: 2px solid;
+    border-color: white;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial;
+    font-size: medium;
+    width: 475px;
+    background-color: transparent;
+}
