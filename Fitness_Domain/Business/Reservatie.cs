@@ -14,6 +14,7 @@ namespace Fitness_Domain.Business
         private string _tijdstip;
         private int _fkLid;
         private int _fkLes;
+        private bool _beschikbaar;
         //properties
         public int IDReservatie
         { get { return _idReservatie; } }
@@ -37,27 +38,49 @@ namespace Fitness_Domain.Business
             get { return _fkLes; }
             set { _fkLes = value; }
         }
+        public bool Beschikbaar
+        {
+            get { return _beschikbaar; }
+            set { _beschikbaar = value; }
+        }
         //constructor
-        public Reservatie(int idReservatie, DateTime datum, string tijdstip, int fkLid, int fkLes)
+        public Reservatie(int idReservatie, DateTime datum, string tijdstip, int fkLid, int fkLes, bool beschikbaar)
         {
             _idReservatie = idReservatie;
             _datum = datum;
             _tijdstip = tijdstip;
             _fkLid = fkLid;
             _fkLes = fkLes;
+            _beschikbaar = beschikbaar;
         }
-        public Reservatie(DateTime datum, string tijdstip, int fkLid, int fkLes)
+        public Reservatie(DateTime datum, string tijdstip, int fkLid, int fkLes, bool beschikbaar)
         {
             _idReservatie = 0;
             _datum = datum;
             _tijdstip = tijdstip;
             _fkLid = fkLid;
             _fkLes = fkLes;
+            _beschikbaar = beschikbaar;
+        }
+        //constructor beschikbare reservaties
+        public Reservatie(int idReservatie, DateTime datum, string tijdstip, int fkLes)
+        {
+            _idReservatie = idReservatie;
+            _datum = datum;
+            _tijdstip = tijdstip;
+            _fkLes = fkLes;
+        }
+        public Reservatie(DateTime datum, string tijdstip, int fkLes)
+        {
+            _idReservatie = 0;
+            _datum = datum;
+            _tijdstip = tijdstip;
+            _fkLes = fkLes;
         }
         //methods
         public override string ToString()
         {
-            return _idReservatie + " - " + _datum + " - " + _tijdstip + " - " + _fkLid + " - " + _fkLes;
+            return _idReservatie + " - " + _datum + " - " + _tijdstip + " - " + _fkLid + " - " + _fkLes + " - " + _beschikbaar;
         }
     }
 }

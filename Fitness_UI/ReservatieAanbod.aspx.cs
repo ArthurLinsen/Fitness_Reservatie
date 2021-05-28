@@ -33,23 +33,39 @@ namespace Fitness_UI
         }
         private void fillrbtnSoortLes()
         {
-            List<Les> alleLessen = _controller.getLessen();
-            rbtnSoortLes.DataSource = alleLessen;
+            List<Fitness_Domain.Business.Les> SoortLes = _controller.getLessen();
+            List<string> SoortLesStrings = new List<string>();
+            foreach (Fitness_Domain.Business.Les item in SoortLes)
+            {
+                SoortLesStrings.Add(item.Naam.ToString());
+            }
+            rbtnSoortLes.DataSource = SoortLesStrings;
             rbtnSoortLes.DataBind();
         }
         private void fillrbtnDatum()
         {
-            List<VrijeReservatie> DataGekozenLes = _controller.getVrijeReservatieFromGekozenLes();
-            rbtnDatum.DataSource = DataGekozenLes;
+            List<Fitness_Domain.Business.Reservatie> DataGekozenLes = _controller.getVrijeReservatieFromGekozenLes();
+            HashSet<string> DataGekozenLesStrings = new HashSet<string>();
+            foreach (Fitness_Domain.Business.Reservatie item in DataGekozenLes)
+            {
+                DataGekozenLesStrings.Add(item.Datum.ToShortDateString());
+            }
+            rbtnDatum.DataSource = DataGekozenLesStrings;
             rbtnDatum.DataBind();
         }
         private void fillrbtnTijd()
         {
-            List<VrijeReservatie> TijdGekozenLes = _controller.getVrijeReservatieFromGekozenLes();
-            rbtnDatum.DataSource = TijdGekozenLes;
-            rbtnDatum.DataBind();
+            List<Fitness_Domain.Business.Reservatie> TijdGekozenLes = _controller.getVrijeReservatieFromGekozenLes();
+            HashSet<string> TijdGekozenLesStrings = new HashSet<string>();
+            foreach (Fitness_Domain.Business.Reservatie item in TijdGekozenLes)
+            {
+                TijdGekozenLesStrings.Add(item.Tijdstip.ToString());
+            }
+            rbtnTijd.DataSource = TijdGekozenLesStrings;
+            rbtnTijd.DataBind();
+
         }
-        protected void btnKiesLes_Click(object sender, EventArgs e)
+        protected void btnGekozenLes_Click(object sender, EventArgs e)
         {
             int index = 0;
             try
@@ -58,23 +74,30 @@ namespace Fitness_UI
             }
             catch
             {
-                //nog een foutmelding schrijven
+                //foutmelding eventueel
                 return;
             }
             _controller.KiesLes(index);
             fillrbtnDatum();
+        }
+        protected void btnGekozenDatum_Click(object sender, EventArgs e)
+        {
             fillrbtnTijd();
         }
         protected void btnReserveer_Click(object sender, EventArgs e)
         {
-            //if (!_controller.setReservatie(rbtnDatum.SelectedValue, rbtnTijd.SelectedValue, idLid = null ,rbtnSoortLes))
-            //{
-            //    _controller.reserveerBeschikbareReservatie();
-            //}
-            //else
-            //{
-            //    ClientScript.RegisterClientScriptBlock(this.GetType(), "s", "window.alert('Reservatie mislukt')");
-            //}
-        } 
+            int index = 0;
+            try
+            {
+                index = rbtnSoortLes.SelectedIndex;
+            }
+            catch
+            {
+                _controller.reserveerBeschikbareReservatie(index);
+                ClientScript.RegisterClientScriptBlock(this.GetType(), "s", "window.alert('De reservatie is gelukt, u ontvangt één dag van tevoren een herinneringsemail');", true);
+                return;
+            }
+            Response.Redirect("Home.aspx");
+        }
     }
 }

@@ -33,8 +33,15 @@ namespace Fitness_UI
 
         protected void btnMeldAan_Click(object sender, EventArgs e)
         {
-            _controller.setLid(txtfamilienaam.Text, txtVoornaam.Text, Convert.ToDateTime(txtGeboortedatum.Text), txtAdres.Text, Convert.ToInt32(txtPostcode.Text), txtGemeente.Text, txtTelefoonnummer.Text, txtEmailadres.Text, txtRijksregisternummer.Text);
-            Response.Redirect("logIn.aspx");
+            if (_controller.setLid(txtfamilienaam.Text, txtVoornaam.Text, Convert.ToDateTime(txtGeboortedatum.Text), txtAdres.Text, Convert.ToInt32(txtPostcode.Text), txtGemeente.Text, txtTelefoonnummer.Text, txtEmailadres.Text, txtRijksregisternummer.Text))
+            {
+                ClientScript.RegisterClientScriptBlock(this.GetType(), "s", "window.alert('Gebruiker bestaat al, ga naar login!')");
+            }
+            else
+            {
+                _controller.setLid(txtfamilienaam.Text, txtVoornaam.Text, Convert.ToDateTime(txtGeboortedatum.Text), txtAdres.Text, Convert.ToInt32(txtPostcode.Text), txtGemeente.Text, txtTelefoonnummer.Text, txtEmailadres.Text, txtRijksregisternummer.Text);
+                Response.Redirect("logIn.aspx");
+            }
         }
     }
 }

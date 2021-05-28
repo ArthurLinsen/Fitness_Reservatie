@@ -100,5 +100,17 @@
       <Name>Fitness_Domain</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HeaderImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LogoRtalsmove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LogoRtalsmove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HeaderImage.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

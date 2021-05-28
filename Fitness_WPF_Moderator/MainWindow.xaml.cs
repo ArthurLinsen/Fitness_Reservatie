@@ -26,13 +26,20 @@ namespace Fitness_WPF_Moderator
         {
             InitializeComponent();
             _controller = new Controller();
-            lbxSoortenLessen.ItemsSource = _controller.getLessen();
-            lbxSoortenLessen.Items.Refresh();
+
+            List<Fitness_Domain.Business.Les> Soortles = _controller.getLessen();
+            List<string> SoortLesStrings = new List<string>();
+            foreach (Fitness_Domain.Business.Les item in Soortles)
+            {
+                SoortLesStrings.Add(item.Naam.ToString());
+            }
+            cbxLessen.ItemsSource = SoortLesStrings;
+            cbxLessen.Items.Refresh();
         }
 
         private void btnVoegVrijeReservatieToe_Click(object sender, RoutedEventArgs e)
         {
-            //_controller.setReservatie(Convert.ToDateTime(dprDatum.SelectedDate), txtTijdstip.Text, Convert.ToInt32(txtSoortLes.Text));
+            _controller.setReservatie(Convert.ToDateTime(dprDatum.SelectedDate), txtTijdstip.Text, cbxLessen.SelectedIndex);
         }
     }
 }

@@ -73,13 +73,20 @@
     <Content Include="GroupTraining.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Images\AanmeldImage.jpg" />
+    <Content Include="Images\Fitness.jpg" />
     <Content Include="Images\gebouwRtalsmove.PNG" />
     <Content Include="Images\HeaderImage.jpg" />
     <Content Include="Images\locateRtalsmove.PNG" />
     <Content Include="Images\LogInImage.jpg" />
+    <Content Include="Images\PersonalTraining.jpg" />
+    <Content Include="Images\ReservatieImage.jpg" />
+    <Content Include="Images\SmallGroupTraining.jpg" />
+    <Content Include="Images\Spinning.jpg" />
+    <Content Include="Images\Yoga.jpg" />
+    <Content Include="Images\Zumba.jpg" />
     <Content Include="logIn.aspx" />
     <Content Include="PersonalTraining.aspx" />
-    <Content Include="Reservatie.aspx" />
+    <Content Include="ReservatieWebsite.aspx" />
     <Content Include="ExtraLayout.css" />
     <Content Include="SmallGroupTraining.aspx" />
     <Content Include="ReservatieAanbod.aspx" />
@@ -136,12 +143,12 @@
       <DependentUpon>PersonalTraining.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reservatie.aspx.cs">
-      <DependentUpon>Reservatie.aspx</DependentUpon>
+    <Compile Include="ReservatieWebsite.aspx.cs">
+      <DependentUpon>ReservatieWebsite.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Reservatie.aspx.designer.cs">
-      <DependentUpon>Reservatie.aspx</DependentUpon>
+    <Compile Include="ReservatieWebsite.aspx.designer.cs">
+      <DependentUpon>ReservatieWebsite.aspx</DependentUpon>
     </Compile>
     <Compile Include="SmallGroupTraining.aspx.cs">
       <DependentUpon>SmallGroupTraining.aspx</DependentUpon>

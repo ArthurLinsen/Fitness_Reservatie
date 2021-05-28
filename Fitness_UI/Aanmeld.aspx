@@ -28,34 +28,37 @@ body {
 <body>
     <%-- Aanmeld gedeelte --%>
     <form id="formAanmeld" runat="server">
-        <div class="w3-container" style$="padding:128px 16px">
+        <div class="w3-container" style="padding:128px 16px">
             <div class="layoutSignInUp">
-                <asp:Label ID="lblFamilienaam" runat="server" Text="Familienaam" Width="215px" ForeColor="White"></asp:Label>
-                <asp:TextBox ID="txtfamilienaam" runat="server" BackColor="Transparent" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="White"></asp:TextBox><br />
+                <asp:Label ID="lblFamilienaam" runat="server" Text="Familienaam" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:Label>
+                <asp:TextBox ID="txtfamilienaam" runat="server" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:TextBox><br />
                 <br />
-                <asp:Label ID="lblVoornaam" runat="server" Text="Voornaam" Width="215px" ForeColor="White"></asp:Label>
-                <asp:TextBox ID="txtVoornaam" runat="server" BackColor="Transparent" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="White"></asp:TextBox><br />
+                <asp:Label ID="lblVoornaam" runat="server" Text="Voornaam" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:Label>
+                <asp:TextBox ID="txtVoornaam" runat="server" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:TextBox><br />
                 <br />
-                <asp:Label ID="lblGeboortedatum" runat="server" Text="Geboortedatum" Width="215px" ForeColor="White"></asp:Label>
-                <asp:TextBox ID="txtGeboortedatum" runat="server"  TextMode="DateTimeLocal"  placeholder="01-01-2000" BackColor="Transparent" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="White"></asp:TextBox><br />
+                <asp:Label ID="lblGeboortedatum" runat="server" Text="Geboortedatum" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:Label>
+                <asp:TextBox ID="txtGeboortedatum" runat="server"  TextMode="Date"  placeholder="01-01-2000" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:TextBox><br />
                 <br />
-                <asp:Label ID="lblAdres" runat="server" Text="Adres" Width="215px" ForeColor="White"></asp:Label>
-                <asp:TextBox ID="txtAdres" runat="server" BackColor="Transparent" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="White"></asp:TextBox><br />
+                <asp:Label ID="lblAdres" runat="server" Text="Adres" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:Label>
+                <asp:TextBox ID="txtAdres" runat="server" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:TextBox><br />
                 <br />
-                <asp:Label ID="lblPostcode" runat="server" Text="Postcode" Width="215px" ForeColor="White"></asp:Label>
-                <asp:TextBox ID="txtPostcode" runat="server" BackColor="Transparent" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="White"></asp:TextBox><br />
+                <asp:Label ID="lblPostcode" runat="server" Text="Postcode" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:Label>
+                <asp:TextBox ID="txtPostcode" runat="server" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:TextBox><br />
                 <br />
-                <asp:Label ID="lblGemeente" runat="server" Text="Gemeente" Width="215px" ForeColor="White"></asp:Label>
-                <asp:TextBox ID="txtGemeente" runat="server" BackColor="Transparent" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="White"></asp:TextBox><br />
+                <asp:Label ID="lblGemeente" runat="server" Text="Gemeente" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:Label>
+                <asp:TextBox ID="txtGemeente" runat="server" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:TextBox><br />
                 <br />
-                <asp:Label ID="lblTelefoonnummer" runat="server" Text="Telefoonnummer" Width="215px" ForeColor="White"></asp:Label>
-                <asp:TextBox ID="txtTelefoonnummer" runat="server" BackColor="Transparent" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="White"></asp:TextBox><br />
+                <asp:Label ID="lblTelefoonnummer" runat="server" Text="Telefoonnummer" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:Label>
+                <asp:TextBox ID="txtTelefoonnummer" runat="server" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:TextBox><br />
                 <br />
-                <asp:Label ID="lblEmailadres" runat="server" Text="Emailadres" Width="215px" ForeColor="White"></asp:Label>
-                <asp:TextBox ID="txtEmailadres" runat="server" BackColor="Transparent" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="White"></asp:TextBox><br />
+                <asp:Label ID="lblEmailadres" runat="server" Text="Emailadres" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:Label>
+                <asp:TextBox ID="txtEmailadres" runat="server" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:TextBox><br />
                 <br />
-                <asp:Label ID="lblRijksregisternummer" runat="server" Text="Rijksregisternummer" Width="215px" ForeColor="White"></asp:Label>
-                <asp:TextBox ID="txtRijksregisternummer" runat="server" BackColor="Transparent" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="White"></asp:TextBox><br />
+                <asp:Label ID="lblRijksregisternummer" runat="server" Text="Rijksregisternummer" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:Label>
+                <asp:TextBox ID="txtRijksregisternummer" runat="server" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:TextBox><br />
+                <br />
+                <asp:Label ID="lblWachtwoord" runat="server" Text="Wachtwoord" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:Label>
+                <asp:TextBox ID="txtWachtwoord" runat="server" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:TextBox><br />
                 <br />
                 <asp:Button ID="btnMeldAan" runat="server" Text="Word Lid" BackColor="Teal" ForeColor="White" Width="430px" OnClick="btnMeldAan_Click"/>
             </div>

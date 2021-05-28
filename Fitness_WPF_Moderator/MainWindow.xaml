@@ -5,21 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fitness_WPF_Moderator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Fitness_Reservatie - Admin" Height="450" Width="800" Background="Black">
+    <Grid Margin="278,0,-0.4,1">
+        <Grid.Background>
+            <ImageBrush ImageSource="HeaderImage.jpg"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="403*"/>
             <RowDefinition Height="17*"/>
         </Grid.RowDefinitions>
-        <Label Content="Kies een datum" HorizontalAlignment="Left" Margin="100,80,0,0" VerticalAlignment="Top" Width="102"/>
-        <Label Content="Kies een tijdstip" HorizontalAlignment="Left" Margin="100,120,0,0" VerticalAlignment="Top" Width="102"/>
-        <Label Content="Kies een soort les" HorizontalAlignment="Left" Margin="100,160,0,0" VerticalAlignment="Top"/>
-        <DatePicker x:Name="dprDatum" HorizontalAlignment="Left" Margin="260,80,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtTijdstip" HorizontalAlignment="Left" Height="23" Margin="260,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnVoegVrijeReservatieToe" Content="Voeg open reservatie(s) toe" HorizontalAlignment="Left" VerticalAlignment="Top" Width="280" Margin="100,238,0,0" Click="btnVoegVrijeReservatieToe_Click"/>
-        <TextBox x:Name="txtSoortLes" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="260,160,0,0"/>
-        <Label Content="Soorten lessen" HorizontalAlignment="Left" Margin="478,80,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <ListBox x:Name="lbxSoortenLessen" HorizontalAlignment="Left" Height="50" Margin="478,111,0,0" VerticalAlignment="Top" Width="152"/>
+        <Label Content="Kies een datum" HorizontalAlignment="Left" Margin="-266,61,0,0" VerticalAlignment="Top" Width="102" Foreground="White"/>
+        <Label Content="Kies een tijdstip" HorizontalAlignment="Left" Margin="-266,101,0,0" VerticalAlignment="Top" Width="102" Foreground="White" RenderTransformOrigin="0.535,4.141"/>
+        <Label Content="Kies een soort les" HorizontalAlignment="Left" Margin="-266,147,0,0" VerticalAlignment="Top" Foreground="White" Width="102"/>
+        <DatePicker x:Name="dprDatum" HorizontalAlignment="Left" Margin="-159,62,0,0" VerticalAlignment="Top" Width="137"/>
+        <TextBox x:Name="txtTijdstip" HorizontalAlignment="Left" Height="23" Margin="-159,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137"/>
+        <ComboBox x:Name="cbxLessen" HorizontalAlignment="Left" Margin="-159,150,0,0" VerticalAlignment="Top" Width="137"/>
+        <Button x:Name="btnVoegVrijeReservatieToe" Content="Voeg open reservatie(s) toe" HorizontalAlignment="Left" VerticalAlignment="Top" Width="244" Margin="-266,193,0,0" Click="btnVoegVrijeReservatieToe_Click" Height="23" Background="Teal" Foreground="White"/>
+
     </Grid>
 </Window>

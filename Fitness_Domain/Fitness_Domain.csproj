@@ -47,12 +47,10 @@
   <ItemGroup>
     <Compile Include="Business\Categorie.cs" />
     <Compile Include="Business\Controller.cs" />
-    <Compile Include="Business\Fitness.cs" />
     <Compile Include="Business\FitnessClub.cs" />
     <Compile Include="Business\FitnessClubGeeftLes.cs" />
     <Compile Include="Business\Les.cs" />
     <Compile Include="Business\Lid.cs" />
-    <Compile Include="Business\VrijeReservatie.cs" />
     <Compile Include="Business\Reservatie.cs" />
     <Compile Include="Persistence\CategorieMapper.cs" />
     <Compile Include="Persistence\FitnessClubGeeftLesMapper.cs" />

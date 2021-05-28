@@ -33,13 +33,13 @@ namespace Fitness_UI
         protected global::System.Web.UI.WebControls.RadioButtonList rbtnSoortLes;
 
         /// <summary>
-        /// btnKiesLes control.
+        /// btnGekozenLes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnKiesLes;
+        protected global::System.Web.UI.WebControls.Button btnGekozenLes;
 
         /// <summary>
         /// rbtnDatum control.
@@ -49,6 +49,15 @@ namespace Fitness_UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList rbtnDatum;
+
+        /// <summary>
+        /// btnGekozenDatum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGekozenDatum;
 
         /// <summary>
         /// rbtnTijd control.

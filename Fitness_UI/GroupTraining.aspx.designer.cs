@@ -24,6 +24,33 @@ namespace Fitness_UI
         protected global::System.Web.UI.HtmlControls.HtmlForm formGroupTraining;
 
         /// <summary>
+        /// imgSpinning control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgSpinning;
+
+        /// <summary>
+        /// imgYoga control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgYoga;
+
+        /// <summary>
+        /// imgZumba control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgZumba;
+
+        /// <summary>
         /// HeaderImage control.
         /// </summary>
         /// <remarks>

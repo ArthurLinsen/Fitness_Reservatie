@@ -30,11 +30,11 @@ body {
     <form id="formLogIn" runat="server">
         <div class="w3-container" style="padding:128px 16px">
             <div class="layoutSignInUp">
-                <asp:Label ID="lblEmailadres" runat="server" Text="Emailadres" Width="215px" ForeColor="White"></asp:Label>
-                <asp:TextBox ID="txtEmailadres" runat="server" Required Width="215px" BackColor="Transparent" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="White"></asp:TextBox><br />
+                <asp:Label ID="lblEmailadres" runat="server" Text="Emailadres" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:Label>
+                <asp:TextBox ID="txtEmailadres" runat="server" Required Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:TextBox><br />
                 <br />
-                <asp:Label ID="lblPaswoord" runat="server" Text="Paswoord" Width="215px" ForeColor="White"></asp:Label>
-                <asp:TextBox ID="txtPaswoord" runat="server" Required TextMode="Password" Width="215px" BackColor="Transparent" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="White"></asp:TextBox><br />
+                <asp:Label ID="lblPaswoord" runat="server" Text="Paswoord" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:Label>
+                <asp:TextBox ID="txtPaswoord" runat="server" Required TextMode="Password" Width="215px" BackColor="#c0c0c0" BorderColor="White" BorderWidth="1px" Font-Size="Medium" ForeColor="Black"></asp:TextBox><br />
                 <br />
                 <asp:Button ID="btnLogIn" runat="server" Text="Log in" BackColor="Teal" ForeColor="White" Width="430px" OnClick="btnLogIn_Click" Font-Size="Medium"/>
                 <br />
